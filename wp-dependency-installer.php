@@ -447,7 +447,7 @@ if ( ! class_exists( 'WP_Dependency_Installer' ) ) {
 			$this->current_slug = $slug;
 			add_filter( 'upgrader_source_selection', [ $this, 'upgrader_source_selection' ], 10, 2 );
 
-			$skin     = new WP_Dependency_Installer_Skin(
+			$skin     = new WP_Ajax_Upgrader_Skin(
 				[
 					'type'  => 'plugin',
 					'nonce' => wp_nonce_url( $this->config[ $slug ]['download_link'] ),
